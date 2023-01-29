@@ -1,4 +1,4 @@
-export default function HeaderPlay(){
+export default function HeaderPlay(props){
     return(
     <>
         <header>
@@ -6,10 +6,8 @@ export default function HeaderPlay(){
                 <h1>Labefy</h1> 
             </div>
             <div>
-                <button>CADASTRAR PLAYLIST</button>
-                <button>VISUALIZAR PLAYLIST</button>
-                <button>BUSCAR MÚSICA</button>
-                <button>ADICIONAR MÚSICA</button>
+                <button onClick={()=> props.changePage("playlistCreationPage")}>CADASTRAR PLAYLIST</button>
+                <button onClick={()=> props.changePage("playlistManagerPage")}>GERENCIAR PLAYLIST</button>
             </div>
         </header>
     </>
